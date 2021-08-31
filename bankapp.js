@@ -72,7 +72,7 @@ class Bank {
         let balance = blnc.value;
         if(username == "" || password == "" || acc_no == "" || balance == "" ){
             alert("Failed to account Created");
-        }
+        }else{
 
 
         let user = { username, password, acc_no, balance }
@@ -80,6 +80,7 @@ class Bank {
         localStorage.setItem(user.acc_no, JSON.stringify(user));
         alert("account Created");
         location.href = 'banklogin.html';
+		}
         }
 
     authenticate() {
